@@ -24,7 +24,9 @@ class BloomFilter:
     def check(self, item):
         return all(self.bit_array[h] for h in self._hashes(item))
 
+
 data = pd.read_csv('email.csv')
+
 X = data.iloc[:, 1:-1]  
 y = data.iloc[:, -1]
 
